@@ -6,17 +6,7 @@ const Gallery = () => {
     const [loading, setLoading] = useState(true);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    useEffect(() => {
-        axios.get('/api/images')
-            .then(response => {
-                setImages(response.data);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error("There was an error fetching the images!", error);
-                setLoading(false);
-            });
-    }, []);
+    
 
     const sampleImages = [
         { _id: '1', url: 'https://th.bing.com/th/id/OIP.SJhIdB0LAOgo1O6bP1OWnQHaHa?rs=1&pid=ImgDetMain', title: 'Serrano peppers powder' },
