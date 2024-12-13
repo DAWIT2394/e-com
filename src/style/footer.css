@@ -1,0 +1,102 @@
+/* General Footer Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    gap: 20px; /* Space between items */
+  }
+  
+  /* Left Side Styling */
+  .footer-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .footer-left-inner {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info h4 {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc; /* Slightly lighter text for contrast */
+  }
+  
+  .contact-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-link:hover {
+    color: #ff5722; /* Highlight link on hover */
+  }
+  
+  /* Right Side Styling */
+  .footer-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .footer-right h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #f5f5f5;
+  }
+  
+  .footer-right p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  /* Social Media Links */
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    text-decoration: none;
+    color: #32cd32; /* Green color for social links */
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .social-link:hover {
+    color: #228b22; /* Darker green on hover */
+  }
+  
+  .social-icon {
+    font-size: 18px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      flex: none;
+      width: 100%;
+    }
+  
+    .social-media {
+      align-items: center;
+    }
+  }
+  

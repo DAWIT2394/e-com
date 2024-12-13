@@ -1,0 +1,258 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  background-size: cover; /* Ensures the image covers the entire body */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+  background-color: hsl(0, 36%, 10%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment */
+  padding: 15px 30px;
+ position: relative;
+ 
+
+}
+.tt{
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+
+.navbar img {
+  margin: 0;
+  height: 50px;
+  width: 65px; /* Adjusted for better responsiveness */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem; /* Ensure text is clear on smaller screens */
+}
+
+/* Home Section Styling */
+.home {
+  background: url('https://ashapuraexporters.com/wp-content/uploads/2024/08/Different-Types-of-Red-Chilli-Powder-Its-Uses-1536x1195.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(230, 229, 229);
+}
+
+.home h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+.home h2{
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 3rem; /* Scales down headline for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2.5rem; /* Further scales down for very small screens */
+  }
+}
+
+/* Products Section Styling */
+.products-section {
+  padding: 50px 20px; /* Added padding for mobile */
+  text-align: center;
+}
+
+.products-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* Product Grid Styling */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #c12727;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Slick Carousel Dots */
+.slick-dots li button:before {
+  color: #d32f2f;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #d32f2f;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjusted to two columns on medium screens */
+  }
+
+  .product-card {
+    margin: 10px;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links li {
+    margin-left: 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .product-card {
+    margin: 5px;
+    padding: 15px;
+  }
+
+  .navbar h1 {
+    font-size: 1.4rem;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-links li {
+    margin-left: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Styling */
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-links li {
+    margin-left: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .home {
+    height: 60vh;
+  }
+
+  .products-section h2 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .buy-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
