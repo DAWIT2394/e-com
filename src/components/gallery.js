@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
+import React, { useState } from 'react';
+import g1 from '../assets/g1.jpg'
+import g2 from '../assets/g2.jpg'
+import g3 from '../assets/g3.jpg'
+import g4 from '../assets/g4.jpg'
+import g5 from '../assets/g5.jpg'
+import g6 from '../assets/g6.jpg'
 const Gallery = () => {
-    const [images, setImages] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    
-
     const sampleImages = [
-        // { _id: '1', url: 'https://th.bing.com/th/id/OIP.SJhIdB0LAOgo1O6bP1OWnQHaHa?rs=1&pid=ImgDetMain', title: 'Serrano peppers powder' },
-        // { _id: '2', url: 'https://th.bing.com/th/id/OIP.gmkULCbp2hUOmU7qwFzuXAHaFj?w=600&h=450&rs=1&pid=ImgDetMain', title: 'Anaheim pepper powder' },
-        // { _id: '3', url: 'https://th.bing.com/th/id/R.6178d45eb1b197b8771bf79d31e17d5c?rik=KXoV%2bppQQBM%2fKw&pid=ImgRaw&r=0', title: 'Bhut Jolokia powder' },
-        // { _id: '4', url: 'https://ashapuraexporters.com/wp-content/uploads/2024/08/Different-Types-of-Red-Chilli-Powder-Its-Uses-1536x1195.jpg', title: 'Hungarian Wax powder' },
-        // { _id: '5', url: 'https://www.chilipeppermadness.com/wp-content/uploads/2023/08/Berbere-Spice-Recipe-SQ.jpg', title: 'Chilies' },
-        // { _id: '6', url: 'https://th.bing.com/th/id/OIP.SJhIdB0LAOgo1O6bP1OWnQHaHa?rs=1&pid=ImgDetMain', title: 'Chilies' },
-        // { _id: '7', url: 'https://www.cjr.org/wp-content/uploads/2018/02/chilli-2438001_1920.jpg', title: 'Chilies' },
-        
-    
+        { _id: '1',
+             iimages:g1 , 
+             title: 'Serrano peppers powder' },
+        { _id: '2', iimages: g2, title: 'Anaheim pepper powder' },
+        { _id: '3', iimages: g3, title: 'Bhut Jolokia powder' },
+        { _id: '4', iimages: g4, title: 'Hungarian Wax powder' },
+        { _id: '5', iimages: g5, title: 'Chilies' },
+        { _id: '6', iimages: g6, title: 'Chilies' },
     ];
 
     const openModal = (image) => {
@@ -32,20 +31,16 @@ const Gallery = () => {
         <div>
             <h1 style={titleStyle}>Image Gallery</h1>
             <div style={galleryStyle}>
-                {loading ? (
-                    <p>Loading images...</p>
-                ) : (
-                    (images.length > 0 ? images : sampleImages).map(image => (
-                        <div
-                            key={image._id}
-                            style={imageContainerStyle}
-                            onClick={() => openModal(image)}
-                        >
-                            <img src={image.url} alt={image.title} style={imageStyle} />
-                            <p>{image.title}</p>
-                        </div>
-                    ))
-                )}
+                {sampleImages.map(image => (
+                    <div
+                        key={image._id}
+                        style={imageContainerStyle}
+                        onClick={() => openModal(image)}
+                    >
+                        <img src={image.iimages} alt={image.title} style={imageStyle} />
+                        <p>{image.title}</p>
+                    </div>
+                ))}
             </div>
 
             {selectedImage && (
@@ -60,6 +55,9 @@ const Gallery = () => {
         </div>
     );
 };
+
+// Styles remain unchanged
+
 
 // Styles
 const galleryStyle = {
